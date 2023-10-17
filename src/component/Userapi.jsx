@@ -1,20 +1,22 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import Userinfo from "./Userinfo";
 
 export default function Userapi() {
 
-    const [user,userdata]=useState([])
+  const [user, userdata] = useState([]);
 
-    useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res=>res.json())
-      .then(data=>userdata(data))
-    })
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => userdata(data));
+  },[]);
+
   return (
-    <div className="text-3xl ">
-        <h2>load user data</h2>
-        {
-            user.map(data=> <h2>name:- {data.name}</h2>)
-        }
+    <div className="grid grid-cols-4 w-11/12 mx-auto ">
+        
+      {
+           user.map(datas => <Userinfo user={datas}></Userinfo>) 
+      }
     </div>
-  )
+  );
 }

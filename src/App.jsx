@@ -1,12 +1,13 @@
 
 import './App.css'
-import Counter from './component/Counter'
 import Userapi from './component/Userapi'
 
 function App() {
+  
 
   return (
     <>
+      <h2 className="text-center text-5xl py-5 font-semibold">Rest api data use</h2>
       <Userapi></Userapi>
     </>
   )
