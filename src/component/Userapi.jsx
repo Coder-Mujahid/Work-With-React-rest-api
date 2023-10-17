@@ -12,7 +12,7 @@ export default function Userapi() {
   },[]);
 
   return (
-    <div className="grid grid-cols-4 w-11/12 mx-auto ">
+    <div className="md:grid grid-cols-3 w-11/12 mx-auto p-5 bg-gradient-to-r from-slate-50 to-slate-400 h-auto gap-5">
         
       {
            user.map(datas => <Userinfo user={datas}></Userinfo>) 
